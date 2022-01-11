@@ -142,20 +142,111 @@ if (birthYear <= 2000) {
   century = 21;
 }
 console.log(century)
-*/
 
 //
 // section 2 vid 20 Type Conversion and Coercion
 //
 
+//type conversion
+const inputYear = '1991';
+console.log(Number(inputYear))
+console.log(Number(inputYear) + 18)
+
+console.log(String(23))
+// type coercion
+console.log('I am ' + 23 + ' years old')
 
 
+//
+// section 2 vid 21 Truthy and falsy
+//
+
+// 5 falsy vlaues: 0, '', undefined, null NaN
+console.log(Boolean(0));
+console.log(Boolean(''));
+console.log(Boolean(undefined));
+console.log(Boolean(null));
+console.log(Boolean('bingo'));
+console.log(Boolean(NaN));
+
+let money = 500;
+
+if (money) {
+  console.log('Dont spend it all ')
+} else {
+  console.log('get a job')
+}
+
+let height;
+if (height) {
+  console.log('defined')
+} else {
+  console.log('NOT defined')
+}
 
 
+//
+// section 2 vid 22 Equality Operators: == vs ===
+//
+
+const age = '18';
+if (age === 18) console.log('you an adult (strict)');
+if (age == 18) console.log(' youse an adult (loose)');
+
+const favorite = Number(prompt('what is your fave number?'));
+console.log(favorite);
+console.log(typeof (favorite));
+
+if (favorite === 23) {
+  console.log('23 an amazing age')
+} else if (favorite === 7) {
+  console.log('7 a cool num')
+} else {
+  console.log('Number is not 23 or 7')
+}
+
+if (favorite !== 23) console.log('why not 23')
 
 
+//
+// section 2 vid 26 The switch statement
+//
 
+const day = 'monday';
 
+switch (day) {
+  case 'monday':
+    console.log('Plan course structure');
+    console.log('second line in monday go to meetup')
+    break;
+  case 'tuesday':
+    console.log('Theory videos prep');
+    break;
+  case 'wednesday':
+  case 'thursday':
+    console.log('Write code examples');
+    break;
+  case 'friday':
+    console.log('record videos');
+    break;
+  case 'saturday':
+  case 'sunday':
+    console.log('Enjoy the weekend');
+    break;
+  default:
+    console.log('not valid day');
+}
 
+*/
 
+//
+// section 2 vid 28 Conditional operator
+//
 
+const age = 23;
+// age >= 18 ? console.log('i like to smoke 🚬') : console.log('no smoke');
+
+const drink = age >= 18 ? 'wine🍷🍷' : 'water 💧';
+console.log(drink)
+
+console.log(`I like to drink ${age >= 18 ? 'wine🍷🍷' : 'water 💧'}`)
